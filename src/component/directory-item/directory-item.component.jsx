@@ -1,16 +1,17 @@
-import './directory-item.sytles.scss';
-
-const DirectoryItem = ({category}) => {
+import { BackgroundImage, Body, DirectoryItemContainer } from '../directory-item/directory-item.sytles';
+import { useNavigate } from 'react-router-dom';
+const DirectoryItem = ({ category }) => {
+  const { imageUrl, title, routes } = category;
+  const navigate = useNavigate()
+  const onNavigateHandler = () => navigate(routes)
   return (
-    <div className='directory-item-container'>
-    <div className="background-image" style={{
- backgroundImage: `url(${category.imageUrl}) `
-}}></div>
-  <div className='directory-body-container'>
-      <h2>{category.title}</h2>
+    <DirectoryItemContainer onClick={onNavigateHandler}>
+      <BackgroundImage imageUrl={ imageUrl} />
+  <Body>
+      <h2>{title}</h2>
     <p>Shop Now</p>
-  </div>
-</div>
+  </Body>
+</DirectoryItemContainer>
  ) 
 }
 export default DirectoryItem
