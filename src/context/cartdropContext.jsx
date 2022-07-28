@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import CartItem from "../component/cart-item/cart-item.component";
 
 const addCartItem = (cartItems, productToAdd) => {
   // find if cartItem contain product to add
