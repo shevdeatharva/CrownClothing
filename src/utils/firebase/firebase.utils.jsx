@@ -1,4 +1,3 @@
-import { queryByTestId } from '@testing-library/react';
 import { initializeApp } from 'firebase/app'
 import {
   getAuth, signInWithRedirect,
@@ -23,7 +22,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+ initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 

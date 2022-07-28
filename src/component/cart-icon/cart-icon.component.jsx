@@ -1,4 +1,3 @@
-import { ReactComponent as  Shoppingsvg } from '../../assests/shopping-bag.svg';
 import { ShoppingIcon, CartIconContainer, ItemCount } from '../cart-icon/cart-icon.styles';
 import { useContext } from 'react';
 import { CartContext } from '../../context/cartdropContext';
